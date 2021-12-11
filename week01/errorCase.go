@@ -13,7 +13,7 @@ type user struct {
 
 func getUser(db *sql.DB, uid int64) (*user, error) {
 	user := new(user)
-	sqlStmt := `SELECT account FROM user WHERE uid = ?`
+	sqlStmt := `SELECT name,age FROM user WHERE uid = ?`
 	rows, err := db.Query(sqlStmt)
 	if err == sql.ErrNoRows {
 		return nil, errors.New("user not found")
