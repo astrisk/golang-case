@@ -3,6 +3,7 @@ package week01
 import (
 	"database/sql"
 	"errors"
+	"fmt"
 )
 
 type user struct {
@@ -16,7 +17,7 @@ func getUser(db *sql.DB, uid int64) (*user, error) {
 	sqlStmt := `SELECT name,age FROM user WHERE uid = ?`
 	rows, err := db.Query(sqlStmt)
 	if err == sql.ErrNoRows {
-		return nil, errors.New("user not found")
+		return nil, errors.New(fmt.Sprintf("user not found, sql: %s",sqlStmt))
 	}
 	if err != nil {
 		return nil, err
