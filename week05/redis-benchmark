@@ -34,7 +34,7 @@ done
 ```sh
 redis-benchmark -h x.x.x.x -p 6379 -r 10000 -n 10000 -t set   -d 1024  -q
 redis-benchmark -h x.x.x.x -p 6379 -r 10000 -n 10000 -t set   -d 2048  -q
-redis-benchmark -h x.x.x.x -p 6379 -r 10000 -n 10000 -t set   -d 3096  -q
+redis-benchmark -h x.x.x.x -p 6379 -r 10000 -n 10000 -t set   -d 3072  -q
 redis-benchmark -h x.x.x.x -p 6379 -r 10000 -n 10000 -t set   -d 4096  -q
 
 ```
