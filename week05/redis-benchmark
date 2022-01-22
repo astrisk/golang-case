@@ -6,7 +6,7 @@
 #!/bin/bash
 ## redis benchmark test runner
 
-HOST=10.202.40.182
+HOST=x.x.x.x
 PORT=6379
 THREADS=20
 COUNTS=1000000
